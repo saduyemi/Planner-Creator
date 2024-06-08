@@ -1,0 +1,98 @@
+// MongoDB Steps
+    1.) Create a new project on MongoDB Atlas
+    2.) Create a new cluster for that project 
+    3.) Go to Browse Collections and click something related to "Add Data"
+    4.) Give database a name, and give collection a name 
+
+    5.) Connect to database using link given by drivers
+        - mongodb+srv://saduyemi1:<password>@todoapp.bm0dhvi.mongodb.net/?retryWrites=true&w=majority&appName=todoApp
+        => mongodb+srv://saduyemi1:code1111@todoapp.bm0dhvi.mongodb.net/tododb
+        
+// Backend Operations
+    //  GET
+        - Get all documents from the database ^
+        - Get one document from the database
+    //  POST
+        - Create a new document/task ^
+    //  PATCH
+        - Update the completed field for a specific task ^
+    //  DELETE
+        - Delete a specific task ^
+
+// fix default styles setted on buttons use class names instead of "button {}" cause there's buttons with different purposes
+
+// 
+    Relative Sizes (%) - Have to specify/define the parent element height and/or width for child elemnent to be able to be sized with relative sizing
+
+    Positions:
+        - To enable position: absolute for child element, have to specify position: relative for parent element. That way child element will be positioned based on 
+          the position of the parent element in the window. Otherwise, child element with "position: absolute" will be positioned based on body element.
+
+
+
+/ * 
+const express = require('express');
+const mongoose = require('mongoose');
+const Task = require('./models/tasks');
+
+const app = express();
+
+const dbURI = `mongodb+srv://saduyemi1:code1111@todoapp.bm0dhvi.mongodb.net/tododb`;
+
+mongoose.connect(dbURI)
+        .then(result => app.listen(3000))
+        .catch(err => console.log(err));
+
+const tasks = ["task", "task2", "task3", "task4"];
+
+app.get('/', (req, res) => {
+    res.send('Home Page');
+});
+
+app.get('/get/tasks', (req, res) => {
+    // get all documents in database
+    Task.find()
+        .then(result => {
+            res.send(result);
+        })
+        .catch(err => {
+            console.log(err);
+        });
+});
+
+// replace post with get
+app.get('/create', (req, res) => {
+    task = new Task({task: "DELETE THIS", completed: false}); // create a new task document
+
+    // commit that document to database
+    task.save()
+        .then( (result) => {
+            res.send(result);
+        })
+        .catch(err => {
+            console.log(err);
+        });
+});
+
+
+// replace delete with get
+app.get('/delete', (req, res) => {
+    Task.findByIdAndDelete('665e819cf3feded7a7de98e2')
+        .then(result => {
+            res.send("A Task Has Been Deleted");
+        })
+        .catch(err => {
+            console.log(err);
+        });
+});
+
+// replace get with patch
+app.get('/update', (req, res) => {
+    Task.findByIdAndUpdate('665e8123816d37030c2437de', {completed: true})
+        .then(result => { 
+            res.send("A Task Has Benn Updated")
+        })
+        .catch(erro => {
+            console.log(erro);
+        });
+}); */

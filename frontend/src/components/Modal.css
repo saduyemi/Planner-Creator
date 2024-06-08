@@ -1,0 +1,82 @@
+.modal {
+    position: absolute; /* have to define position of parent element as relative for this to work, so define position of li in taskboard as relative */ /*hence, model is absolutely related to the positioning of it's parent div*/
+    z-index: 1;
+    
+    /*no modifitcations to the positioning of the child div, want it cover the parent div*/
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+    
+    border: 1px solid none;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 100%;   
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+.modal-form {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: nowrap;
+    column-gap: 2px;
+    box-sizing: border-box;
+}
+
+.modal-form > input[type=text] {
+    margin-left: 2%;
+    width: 75%;
+}
+
+.closeBtn {
+    margin-left: 0;
+}
+
+.close {
+    color: gray;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*
+.modal {
+    position: fixed;
+    padding-top: 100px;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: gray;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+*/

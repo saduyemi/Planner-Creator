@@ -1,0 +1,18 @@
+.container {
+    border: 1px solid none;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%; /* or min-content*/ 
+    margin: auto;
+    /*overflow-y: scroll;*/
+    overflow: auto;
+    box-sizing: border-box;
+    
+    max-width: 1150px;
+    /*min-width: 300px;*/
+}
+
+/* 
+add max-width for container so it's still proper on larger screens like desktops
+add min-width for container so it's still proper on phone screens could use percentages of current screent to adjust
+*/

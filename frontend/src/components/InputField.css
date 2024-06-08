@@ -1,0 +1,54 @@
+.formContainer {
+    /*border: 1px dashed black;*/
+    display: flex;
+    align-items: center;
+    height: 10%;
+    margin-bottom: 1%;
+    /*min-height: 40px;*/
+}
+
+form {
+    /*border: 1px solid black;*/
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    column-gap: 0px;
+    box-sizing: border-box;
+}
+
+.formContainer > form > input[type=text] {
+    width: 75%;
+    margin: 0px;
+    border-radius: 0px;
+    margin-left: 2%;
+
+    /*
+    min-width: 200px;
+    min-height: 20px;
+    use media queries instead  
+    */
+}
+
+button {
+    cursor: pointer;
+}
+
+#addBtn {
+    margin-left: 0px;
+    border-radius: 0px;
+    width: 8%;
+    background-color: black;
+    color: white;
+    /*min-width: 45px*/
+} /* added so it doesn't effect the taskboard buttons, which are not apart of a class nor do they have specific ids*/
+
+button:hover {
+    background-color: darkgray;
+}
+
+#addBtn:hover {
+    background-color: white;
+    color: black;
+}

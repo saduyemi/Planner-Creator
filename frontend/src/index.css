@@ -1,0 +1,23 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    /*box-sizing: border-box;*/
+}
+
+html, body, #root {
+    height: 100vh; /* or 100% works too, this ensures the html, body, and root div have defined heights that take up the entire height of the screen, which allows for percentages to be properly used for defined html elements inside the app */ 
+}
+
+
+body {
+    background: lightskyblue;
+    margin: 0;
+    padding: 0; /* making margin & padding 0 is called CSS Reset so user can ensure consistency/ remove default styling*/
+}
+
+/*
+    This is a complete CSS Reset to ensure no default margin and padding for all elements
+    * {
+        margin: 0;
+        padding: 0;
+    }
+*/
