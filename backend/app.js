@@ -6,7 +6,7 @@ const Task = require('./models/tasks');
 
 const app = express();
 
-const dbURI = `mongodb+srv://saduyemi1:code1111@todoapp.bm0dhvi.mongodb.net/tododb`;
+const dbURI = // 
 
 mongoose.connect(dbURI)
         .then(result => app.listen(3000))
